@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard do Cliente - Escritório de Advocacia</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Serviços</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contato</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Dashboard -->
+  <div class="container mt-4">
+    <h1 class="mb-4">Dashboard do Cliente</h1>
+
+    <!-- Informações do Cliente -->
+    <div class="card mb-4">
+      <div class="card-header">
+        Informações do Cliente
+      </div>
+      <div class="card-body">
+        <p class="card-title">Nome: <span id="clientName"></span></p>
+        <p class="card-text">Email: <span id="clientEmail"></span></p>
+      </div>
+    </div>
+
+    <!-- Documentos Pendentes e Processos Ativos -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            Documentos Pendentes
+          </div>
+          <div class="card-body">
+            <p class="card-text">Número: <span id="pendingDocuments"></span></p>
+            <a href="#" class="btn btn-primary">Enviar Documentos</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            Processos Ativos
+          </div>
+          <div class="card-body">
+            <p class="card-text">Número: <span id="activeCases"></span></p>
+            <a href="#" class="btn btn-primary">Ver Detalhes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Áreas de Atuação -->
+    <div class="area-section">
+      <div class="container">
+        <h2 class="area-title">Áreas de Atuação</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="area-item" data-title="CÍVEL">
+              <h3>Direito Civil</h3>
+              <p class="area-description">Resolução de conflitos entre particulares, contratos, danos morais e patrimoniais.</p>
+              <a href="#" class="btn btn-primary">Iniciar Processo</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="area-item" data-title="CONCURSOS">
+              <h3>Direito Criminal</h3>
+              <p class="area-description">Questões relacionadas a relações de trabalho, como demissões, acordos coletivos e direitos do trabalhador.</p>
+              <a href="#" class="btn btn-primary">Iniciar Processo</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="area-item" data-title="CONSUMIDOR">
+              <h3>Direito do Consumidor</h3>
+              <p class="area-description">Proteção dos direitos dos consumidores em compras, contratos e serviços.</p>
+              <a href="#" class="btn btn-primary">Iniciar Processo</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="area-item" data-title="CRIMINAL">
+              <h3>Direito Criminal</h3>
+              <p class="area-description">Defesa em casos criminais, incluindo acusações e investigações criminais.</p>
+              <a href="#" class="btn btn-primary">Iniciar Processo</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="area-item" data-title="FAMÍLIA">
+              <h3>Direito de Família</h3>
+              <p class="area-description">Assuntos familiares, como divórcio, guarda de filhos, pensão alimentícia.</p>
+              <a href="#" class="btn btn-primary">Iniciar Processo</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="area-item" data-title="TRIBUTÁRIO">
+              <h3>Direito Tributário</h3>
+              <p class="area-description">Questões relacionadas a impostos, tributos e planejamento fiscal.</p>
+              <a href="#" class="btn btn-primary">Iniciar Processo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Atividades Recentes -->
+    <div class="card mb-4">
+      <div class="card-header">
+        Atividades Recentes
+      </div>
+      <ul class="list-group list-group-flush" id="recentActivities">
+        <!-- Lista de atividades recentes será preenchida dinamicamente pelo JavaScript -->
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Escritório de Advocacia. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Scripts JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
